@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>JavaScript demo</title>
+	  <!-- add the link tag to the style.css which will be in a folder -->
+	  <link rel="stylesheet" href="Styles/styles.css">
+	  
+	  <!-- used to embed client side script/JS -->
+	  <script type="text/javascript">
+		//comment in JS
+		//add 3 examples of javascript
+		var tries = 0;
+		
+		function guessNum(){
+			var number = 3179;
+			
+			var guess = parseInt(prompt("Enter your guess"));
+			if(guess<number)
+			{
+				alert("Higher")
+				tries++;
+				guessNum();
+			}
+			else if (guess>number)
+			{
+				alert("Lower")
+				tries++;
+				g();
+			}
+			else if (guess == number)
+			{
+			    tries++;
+				alert("You have guessed it in " + tries + " tries")
+			}
+		  
+			
+		}
+		
+		function factorialCalculator(){
+			var a = parseInt(prompt("Enter a number"));
+			var result = 1;
+			while( a > 1)
+			{
+				result = result*a;
+				a--;
+			}
+			alert("The result is " + result)
+		}
+		
+		function powerCalculator(){
+			var num = parseInt(prompt("Enter the number"));
+			var power = parseInt(prompt("Enter the power"));
+			var result = 1;
+			while( power > 0)
+			{
+				result = result*num;
+				power--;
+			}
+			alert("The result is " + result)
+		}
+		
+	  </script>
+	  	  
+	</head>
+	<body>
+		<h1>Graded lab exercise</h1>
+		<p>add 3 examples of javascript</p>
+		<p>create a repo in github and add your project when finished</p>
+		<p>post just the link to the github repo in OneNote</p>
+		<p>you link should look like this https://github/username/repoName.git </p>
+		<input type = "button" class = "button" value ="Guess Number" onclick="guessNum();"/>
+		<input type = "button" class = "button" value ="Factorial Calculator" onclick="factorialCalculator();"/>
+		<input type = "button" class = "button" value ="Power Calculator" onclick="powerCalculator();"/>
+	</body>
+</html>
